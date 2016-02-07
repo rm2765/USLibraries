@@ -1,0 +1,81 @@
+p {
+  font-family: sans-serif;
+}
+
+p1 {
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+p2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: 15px; 
+  margin-left: 180px;
+  }
+
+#myFirstDiv {
+  background-color: gray;
+  color: white;
+  margin: 10px;
+  padding: 15px;
+  font-family: verdana;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-left:120px;
+  }
+
+#makeCities {
+  margin-left: 75px;
+}
+
+#makeMap {
+  margin-left: 50px;
+}
+
+#makeList {
+  margin-left: 50px;
+}
+
+#makePhotos {
+  margin-left: 50px;
+}
+
+
+img {
+  height: 60px;
+  width: 90px;
+  border-radius: 10px;
+}
+
+li a {
+  color: yellow;
+}
+
+.hasBackgroundImage {
+  height: 225px;
+  width: 350px;
+  background-color: steelblue;
+  background-image: url('http://4.bp.blogspot.com/_oqO4sgaxMZc/S_V4IXIzwQI/AAAAAAAAAYU/JdJmZap0vh8/s1600/construction8_new_york_public_library.jpg');
+  background-size: 100%;
+  margin-left: 100px;
+}
+
+#Section2 {
+  background-color: gray;
+  color: white;
+  margin: 10px;
+  padding: 15px;
+  font-family: verdana;
+  border-radius: 10px;
+  }
+  
+  #List {
+    font-weight: bold;
+    font-size: 25;
+    color: white;
+    font-family: verdana;
+  }
+  
