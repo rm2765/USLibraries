@@ -1,3 +1,19 @@
+p {
+  font-family: sans-serif;
+}
+
+p1 {
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+p2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: 15px; 
+  margin-left: 180px;
+  }
+
 #myFirstDiv {
   background-color: gray;
   color: white;
@@ -16,23 +32,6 @@ h1 {
   font-family: verdana;
   border-radius: 10px;
   }
-  
-p {
-  font-family: sans-serif;
-}
-
-p1 {
-  font-family: sans-serif;
-  font-style: italic;
-}
-
-p2 {
-  font-family: sans-serif;
-  font-style: normal;
-  font-size: 15px; 
-  margin-left: 180px;
-  }
-
 
 
 #makeCities {
