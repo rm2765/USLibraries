@@ -1,3 +1,12 @@
+#myFirstDiv {
+  background-color: gray;
+  color: white;
+  margin: 10px;
+  padding: 15px;
+  font-family: verdana;
+  border-radius: 10px;
+}
+
 p {
   font-family: sans-serif;
 }
@@ -14,14 +23,6 @@ p2 {
   margin-left: 180px;
   }
 
-#myFirstDiv {
-  background-color: gray;
-  color: white;
-  margin: 10px;
-  padding: 15px;
-  font-family: verdana;
-  border-radius: 10px;
-}
 
 h1 {
   margin-left:120px;
