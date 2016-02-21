@@ -13,6 +13,29 @@
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <style type="text/css">
+      body, html {
+      font-family: sans-serif;
+    }
+    #myMap {
+      width: 100%;
+      height: 500px;
+      background-color: gray;
+    }
+    button {
+      width: 200px;
+      height: 73px;
+      margin-bottom: 50px;
+      font-size: 24px;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+  </style>
+
+
   
 </head>
 
@@ -57,6 +80,8 @@
 
 <p2>- Ursula K. Le Guin</p2>
 
+</div>
+
 <br>
 <br>
 
@@ -96,11 +121,64 @@
   <br>
   <br>
   
+  <button id="one" class="myButton">NYPL</button>
+  <button id="two" class="myButton">Explorers Club</button>
+  <button id="three" class="myButton">CUNY</button>
+
+  <div id="myMap"></div>
+
+
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript">
+
+
+
+
+    myArray.forEach(function(item) {
+      console.log('walking the array', item);
+      $('#arrayItems').append('<div class="arrayItems">' + item + '</div><br/>');
+    });
+
+
+var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',{
+    attribution: '&copy; 
+    <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+  });
+
+  var myMapData = [
+    {
+      name: "New York Public Library",
+      coord: [40.699542,-73.993767]
+    },
+    {
+      name: "Explorers Club Library",
+      coord: [40.729178,-74.001390]
+    },
+    {
+      name: "Mina Rees Library",
+      coord: [40.729600, -73.958695]
+    },
+  ]
+
+
+  var eastRiver = [40.706913,-73.987513];
+  var upperWestSide = [40.788129,-73.974509];
+  var myZoom = 13;
+
+
+  var map = L.map('myMap').setView(eastRiver, myZoom);
+  map.addLayer(layer)
+
+</script>
+
+</div>
+
   <button id='alert'>
   Fun Fact
   </button>
   
-</div>
+
 
 
 	 <script src="js/jquery.js"></script>
@@ -111,7 +189,7 @@
 
 
 
-</script>
+
  
   <!-- //<script src="js/scripts.js"></scripts> -->
 </body>
