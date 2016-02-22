@@ -61,7 +61,7 @@ li a {
   color: yellow;
 }
 
-.hasBackgroundImage {
+#hasBackgroundImage {
   height: 225px;
   width: 350px;
   background-color: steelblue;
