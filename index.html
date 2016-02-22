@@ -4,21 +4,25 @@
 <head>
   <meta charset="utf-8">
 
-  <title>U.S. Libraries</title>
+  <title>US Libraries</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
 
-  <!-- <link rel="stylesheet" href="css/style.css?v=1.0"> -->
+  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-
-
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
   <style type="text/css">
-      body, html {
+    body, html {
       font-family: sans-serif;
+    }
+    .arrayItem {
+      color: darkblue;
+      font-size: 20px;
+      margin-left: 30px;
+      text-align: center;
     }
     #myMap {
       width: 100%;
@@ -27,103 +31,74 @@
     }
     button {
       width: 200px;
-      height: 73px;
+      height: 63px;
       margin-bottom: 50px;
-      font-size: 24px;
+      font-size: 20px;
       border-radius: 10px;
       margin-right: 10px;
+      background-color: darkgray;
+      outline-color: black;
+      outline-width: 50px;
+      color: black;
+      font-weight: bold;
+
     }
+
+    h1 {
+      color: black;
+      padding: 15px;
+      font-family: verdana;
+      border-radius: 10px;
+      background-color: darkgrey;
+      text-align: center;
+      letter-spacing: 15px;
+    }
+
+
+     h2 {
+      background-color: black;
+      padding: 15px;
+      font-family: lucida;
+      text-align: center;
+      font-size: 15px;
+
+    }
+
+    .hasBackgroundImage {
+      height: 375px;
+      width: 100%;
+      background-image: url('http://4.bp.blogspot.com/_oqO4sgaxMZc/S_V4IXIzwQI/AAAAAAAAAYU/JdJmZap0vh8/s1600/construction8_new_york_public_library.jpg');
+      background-size: 100%;
+      background-position: right;
+      border-radius: 5px;
+}
+
   </style>
-
-
-  
 </head>
 
 <body>
-<div id='myFirstDiv'>
+  <h1>US LIBRARIES</h1>
+  <div class='hasBackgroundImage'></div>
 
-
-  <h1>
-  U.S. Libraries
-  </h1>
-
-  <h4 class='notTestClass'>
-  Special Collections * Architecture * Public Buildings
-  </h4>
-        
-  <button id="makeCities">  
-   <a href="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e35/12237060_1513175905675549_535969805_n.jpg">  Cities
-   </a>  </button> 
- 
-  <button id="makeMap">
-  <a href="https://www.google.com/maps/place/New+York+Public+Library+-+Stephen+A.+Schwarzman+Building/@40.7531863,-73.9844421,17z/data=!3m2!4b1!5s0x89c259006f811e69:0xdf9c5a032104b840!4m2!3m1!1s0x89c2590099a8a8a9:0x3b51df6e509a734c"> Map </a>
-     </button>
-     
-  <button id="makeList">
-  <a href='https://en.wikipedia.org/wiki/List_of_the_largest_libraries_in_the_United_States'> List </a>
-   </button>
-   
-  <button id="makePhotos">
-    <a href="http://www.buzzfeed.com/mattortile/49-breathtaking-libraries-from-all-over-the-world#.kw7OMZBgvz"> Photos</a>
-  </button>
-  
- </div>
-  
-<div class='hasBackgroundImage'> 
-</div>
- 
-<div id='Section2'>
-
-  <p1>
-  “A library is a focal point, a sacred place to a community; and its sacredness is its accessibility, its publicness. It’s everybody’s place.”
-  </p1>
-
-<p2>- Ursula K. Le Guin</p2>
-
-</div>
-
-<br>
-<br>
-
-  <div id='List'> To Visit:
-  </div>
-  
-  <br> 
-  Manhattan
-    <ul>  
+  <h2>
+    <a href='https://en.wikipedia.org/wiki/List_of_the_largest_libraries_in_the_United_States'> Special Collections &nbsp &nbsp</a>
     
-      <li> 
-        <img src='http://bellaonline.us/newyork/lion1.jpg'>
-          <a href='http://www.nypl.org/help/about-nypl/library-lions'> 
-                New York Public Library
-          </a>
-      </li>
-      
- <br>
- 
-    <li>
-      <img src='http://www.pacificislandsresearchinstitute.org/wp-content/uploads/2011/10/Explorers_Club_Registered_S.jpg'>
-          <a href='https://explorersclub.org/about/research/library'> 
-                The Explorers Club Library
-          </a>
-    </li>
+    <a href='http://www.buzzfeed.com/mattortile/49-breathtaking-libraries-from-all-over-the-world#.kw7OMZBgvz'> Architecture &nbsp &nbsp    
+    </a> 
+
+    <a href='http://4.bp.blogspot.com/_oqO4sgaxMZc/S_V4IXIzwQI/AAAAAAAAAYU/JdJmZap0vh8/s1600/construction8_new_york_public_library.jpg'> Indoor & Outdoor Public Spaces</a>
+
+  </h2>
+
+  <div id='arrayItems'></div>
+
+  <br></br>
+
     
-    
- <br>   
-    <li>
-      <img src='https://community.gc.cuny.edu/image/gc_building_images/elevators.jpg'>
-        <a href='http://everything.explained.today/CUNY_Graduate_Center/'>
-   CUNY Graduate Center Mina Rees Library
-        </a>
-    </li>    
-  </ul>
-  
-  <br>
-  <br>
-  
   <button id="one" class="myButton">NYPL</button>
   <button id="two" class="myButton">Explorers Club</button>
-  <button id="three" class="myButton">CUNY</button>
+  <button id="three" class="myButton">Mina Rees</button>
+  
 
   <div id="myMap"></div>
 
@@ -131,66 +106,133 @@
   <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script type="text/javascript">
-
-
-
-
-    myArray.forEach(function(item) {
-      console.log('walking the array', item);
-      $('#arrayItems').append('<div class="arrayItems">' + item + '</div><br/>');
-    });
-
-
-var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',{
-    attribution: '&copy; 
-    <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+  var myName = 'Chris'; //type string
+  var firstNumber = 5; //type number
+  var secondNumber = 10; //type number
+  var notActuallyANumber = '5'; //type string
+  console.log(typeof(myName)); //log to the console the type of myName (string)
+  console.log(typeof(firstNumber));
+  console.log('notActuallyANumber is of type ',typeof(notActuallyANumber));
+  var convertedString = parseInt(notActuallyANumber);
+  console.log('convertedString is of type ',typeof(convertedString));
+  //functions
+  //this function accepts a number and adds 5 to it.
+  function addFive( number ) {
+    console.log('Running function addFive()...');
+    var typeOfInput = typeof(number);
+    console.log(typeOfInput);
+    if ( typeOfInput == 'number') {
+      return number + 5 ;
+    } else {
+      //alert('Someone tried to call addFive() but did not pass a number!')
+    }
+    console.log('The number passed in was ', number)
+    
+  }
+  var output = addFive(5);
+  console.log('Output: ', output);
+  var output2 = addFive('five');
+  console.log('Output: ', output2);
+  //arrays
+  var myArray = [];  
+  console.log(myArray);
+  //how to call an element in an array
+  var firstElement = myArray[1];
+  console.log('2nd:',firstElement);
+  //loop  "walk the array"
+  myArray.forEach(function(item) {
+    console.log('walking the array', item);
+    $('#arrayItems').append('<div class="arrayItem">' + item + '</div><br/>');
   });
+  //objects
+  //object for Chris Whong
+  var myObject = {
+    firstName: 'Chris',
+    lastName: 'Whong',
+    age: 35,
+    studied: 'Urban Planning',
+    students: [
+      'Felix',
+      'Ashley'
+    ]
+  }
+  console.log(myObject.students[1]);
+  //CartoDB Basemap
+  var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+  });
+
+
+
+
 
   var myMapData = [
     {
       name: "New York Public Library",
-      coord: [40.699542,-73.993767]
+      coord: [40.753190,-73.982298]
     },
     {
       name: "Explorers Club Library",
-      coord: [40.729178,-74.001390]
+      coord: [40.769911,-73.965610]
     },
     {
-      name: "Mina Rees Library",
-      coord: [40.729600, -73.958695]
+      name: "CUNY Mina Rees Library",
+      coord: [40.748501, -73.983618]
     },
   ]
-
-
-  var eastRiver = [40.706913,-73.987513];
-  var upperWestSide = [40.788129,-73.974509];
-  var myZoom = 13;
-
-
-  var map = L.map('myMap').setView(eastRiver, myZoom);
+//   //Stamen Watercolor Basemap
+//   var Stamen_Watercolor = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+//   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+//   subdomains: 'abcd',
+//   minZoom: 1,
+//   maxZoom: 16,
+//   ext: 'png'
+// });
+  var centralPark = [40.768257,-73.977213];
+  var NYPL = [40.753190,-73.982298];
+  var MinaRees = [40.748501, -73.983618];
+  var ExplorersClub = [40.769911,-73.965610];
+  var myZoom = 12;
+  //now the fun stuff:  leaflet!
+  var map = L.map('myMap').setView(centralPark, myZoom);
   map.addLayer(layer)
-
-</script>
-
-</div>
-
-  <button id='alert'>
-  Fun Fact
-  </button>
-  
-
-
-
-	 <script src="js/jquery.js"></script>
-	 <script src="js/script.js"></script>
-	
-	
-
-
-
-
-
+  // //Let's add a marker
+  // var marker = L.marker([40.768058,-73.981891]).addTo(map);
+  // marker.bindPopup("<b>Hello world!</b><br>I am a popup.")
+  //Now let's use our custom-made array to make many markers
+  myMapData.forEach(function(element) {
+    var marker = L.marker(element.coord).addTo(map);
+    marker.bindPopup("<b>Visited</b><br> " + element.name)
+  });
+  var panOptions = {
+    animate: true,
+    duration: 2
+  }
+    
  
-  <!-- //<script src="js/scripts.js"></scripts> -->
+  $(".myButton").click(function() {
+      if($(this).attr('id') == 'two' ) {
+        $(this).css('background-color','lightblue');
+        map.panTo(ExplorersClub, panOptions);
+      } else {
+        $(this).css('background-color','lightblue');
+        map.panTo(NYPL, panOptions);
+      }
+    });
+
+    
+    $(".myButton").click(function() {
+      if($(this).attr('id') == 'three' ) {
+        $(this).css('background-color','lightblue');
+        map.panTo(MinaRees, panOptions);
+      } else {
+        $(this).css('background-color','lightblue');
+        map.panTo(NYPL, panOptions);
+      }
+    });
+
+
+
+  </script>
 </body>
 </html>
